@@ -1,20 +1,120 @@
 import { IProject } from '@/types';
 
 export const GENERAL_INFO = {
-    email: 'tasmirolislam@gmail.com',
-
-    emailSubject: "Let's collaborate on a project",
-    emailBody: 'Hi Tajmirul, I am reaching out to you because...',
-
-    oldPortfolio: 'https://www.legacy.me.toinfinite.dev',
-    upworkProfile: 'https://www.upwork.com/freelancers/tajmirul',
+    slogan: 'United By Nerves',
+    email: 'plexusclub@gmail.com',
+    website: 'https://plexusclub.github.io/',
+    college: 'MRCE',
 };
 
 export const SOCIAL_LINKS = [
-    { name: 'github', url: 'https://github.com/Tajmirul' },
-    { name: 'linkedin', url: 'https://www.linkedin.com/in/tajmirul' },
-    { name: 'facebook', url: 'https://www.facebook.com/tajmirul.2000' },
-    { name: 'Old Version', url: GENERAL_INFO.oldPortfolio },
+    { name: 'github', url: 'https://github.com/plexusclub' },
+    { name: 'website', url: GENERAL_INFO.website },
+];
+
+export const ABOUT_US = `
+Plexus is a dynamic initiative aimed at empowering students through a wide range of 
+technical, non-technical, and hackathon events. <br/><br/>
+With clubs, events, and collaborative opportunities, Plexus strives to nurture talent, 
+drive innovation, and unite students under one community: <strong>United By Nerves</strong>.
+`;
+
+export const CLUB_ASSOCIATION = [
+    {
+        name: 'Sai Harshaadithya',
+        role: 'President',
+        message: 'Our college is a beacon of knowledge, fostering an environment that encourages growth and intellectual curiosity.',
+    },
+    {
+        name: 'Parthiban',
+        role: 'Vice President',
+        message: 'Our college is a beacon of knowledge, fostering an environment that encourages growth and intellectual curiosity.',
+    },
+    {
+        name: 'B Akilesh',
+        role: 'Secretary',
+        message: 'Our college is a beacon of knowledge, fostering an environment that encourages growth and intellectual curiosity.',
+    },
+];
+
+export const MANAGEMENT = [
+    {
+        name: 'SRI. CH. MAHENDER REDDY',
+        role: 'Secretary',
+        message: 'As Secretary, I am pleased to introduce Plexus Hub, a dedicated platform for nurturing talent and driving innovation.',
+    },
+    {
+        name: 'DR. CH. BHADRA REDDY',
+        role: 'President',
+        message: 'As President, I am honored to launch Plexus Hub, a forward-thinking initiative aimed at cultivating innovation and excellence.',
+    },
+];
+
+export const EVENTS = [
+    {
+        title: 'Hackathons',
+        slug: 'hackathons',
+        year: 2024,
+        description: `
+        Plexus hosts engaging hackathons that challenge students to solve real-world problems through 
+        innovation, collaboration, and technical skills. 
+        `,
+        techStack: ['Collaboration', 'Problem Solving', 'Teamwork'],
+        thumbnail: '/events/thumbnail/hackathon.jpg',
+        longThumbnail: '/events/long/hackathon.jpg',
+        images: ['/events/images/hackathon-1.jpg'],
+    },
+    {
+        title: 'Technical Workshops',
+        slug: 'technical-workshops',
+        year: 2024,
+        description: `
+        Interactive workshops covering modern technologies, coding practices, and industry tools 
+        to help students strengthen their technical foundations.
+        `,
+        techStack: ['Workshops', 'Learning', 'Innovation'],
+        thumbnail: '/events/thumbnail/workshop.jpg',
+        longThumbnail: '/events/long/workshop.jpg',
+        images: ['/events/images/workshop-1.jpg'],
+    },
+    {
+        title: 'Non-Technical Events',
+        slug: 'non-technical-events',
+        year: 2024,
+        description: `
+        Fun, engaging, and creative events to bring students together, foster teamwork, 
+        and build communication skills beyond academics.
+        `,
+        techStack: ['Teamwork', 'Creativity', 'Networking'],
+        thumbnail: '/events/thumbnail/non-technical.jpg',
+        longThumbnail: '/events/long/non-technical.jpg',
+        images: ['/events/images/non-technical-1.jpg'],
+    },
+];
+
+export const OUR_COLLEGE = {
+    name: 'MRCE',
+    description: `
+    Our college is a beacon of knowledge, fostering an environment that encourages 
+    growth and intellectual curiosity. Plexus is proud to be part of this institution, 
+    empowering students to innovate and collaborate.
+    `,
+};
+export const IMAGES = [
+  { name: "MGRI", link: "/assets/MRGI.png" },
+  { name: "MRCE", link: "/assets/MRCE.png" },
+  { name: "Plexus", link: "/assets/Plexus.png" },
+];
+
+export const LINKS = [
+  { name: "Our Members", link: "/members" },
+  { name: "Our Management", link: "/management" },
+  { name: "Our College", link: "/college" },
+  { name: "Events", link: "/events" },
+  { name: "About Us", link: "/about" },
+  { name: "Contact Us", link: "/contact" },
+  { name: "Clubs", link: "/clubs" },
+  { name: "Stories", link: "/stories" },
 ];
 
 export const MY_STACK = {

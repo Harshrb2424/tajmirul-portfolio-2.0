@@ -4,33 +4,53 @@
 
 @layer base {
     :root {
-        --background: 0 0% 13%;
-        --background-light: 0 0% 19%;
-        --foreground: 0 0% 87%;
+        /* Background & Base */
+        --background: 240 5% 5%;       /* Deep indigo-black */
+        --background-light: 240 8% 10%; /* Slightly lighter indigo */
+        --foreground: 0 0% 95%;         /* Near-white for text */
 
-        --card: 0 0% 3.9%;
-        --card-foreground: 0 0% 98%;
-        --popover: 0 0% 3.9%;
+        /* Card & Popover (Dark UI Elements) */
+        --card: 240 6% 7%;              /* Darker indigo */
+        --card-foreground: 0 0% 98%;    /* Almost white */
+        --popover: 240 6% 7%;
         --popover-foreground: 0 0% 98%;
 
-        --primary: 140 100% 47%;
-        --primary-foreground: 0 0% 13%;
-        --secondary: 193 100% 47%;
-        --secondary-foreground: 0 0% 13%;
-        --muted: 0 0% 14.9%;
-        --muted-foreground: 0 0% 71%;
-        --accent: 0 0% 14.9%;
+        /* Primary (Electric Blue Glow) */
+        --primary: 220 90% 65%;         /* Bright electric blue */
+        --primary-foreground: 0 0% 10%; /* Very dark for contrast */
+
+        /* Secondary (Neon Purple/Magenta Accent) */
+        --secondary: 280 85% 60%;       /* Vivid magenta-purple */
+        --secondary-foreground: 0 0% 10%;
+
+        /* Muted & Accent (Subtle Depth) */
+        --muted: 240 10% 12%;           /* Soft indigo */
+        --muted-foreground: 0 0% 70%;
+        --accent: 240 10% 12%;
         --accent-foreground: 0 0% 98%;
-        --destructive: 0 62.8% 30.6%;
+
+        /* Destructive (Warm Orange Accents) */
+        --destructive: 30 80% 60%;      /* Neon orange-yellow */
         --destructive-foreground: 0 0% 98%;
-        --border: 0 0% 24%;
-        --input: 0 0% 14.9%;
-        --ring: 0 0% 83.1%;
-        --chart-1: 220 70% 50%;
-        --chart-2: 160 60% 45%;
-        --chart-3: 30 80% 55%;
-        --chart-4: 280 65% 60%;
-        --chart-5: 340 75% 55%;
+
+        /* Borders & Inputs */
+        --border: 240 15% 18%;          /* Subtle glowing edge */
+        --input: 240 10% 12%;
+        --ring: 220 90% 70%;            /* Bright blue glow for focus */
+
+        /* Charts (Match Image Swirls) */
+        --chart-1: 220 90% 65%;         /* Electric blue */
+        --chart-2: 280 85% 60%;         /* Neon purple */
+        --chart-3: 30 80% 60%;          /* Warm orange speck */
+        --chart-4: 240 70% 50%;         /* Deep blue gradient */
+        --chart-5: 340 75% 60%;         /* Pink-magenta blend */
+
+        /* Extra Colors (Custom Palette) */
+        --extra-1: 336 60% 90%;  /* #f5D5E0 (soft pastel pink) */
+        --extra-2: 239 26% 54%;  /* #6667AB (indigo violet) */
+        --extra-3: 310 42% 35%;  /* #7B337E (deep magenta-purple) */
+        --extra-4: 287 74% 17%;  /* #420D4B (dark plum) */
+        --extra-5: 268 77% 12%;  /* #210635 (midnight purple) */
     }
 }
 
