@@ -2,20 +2,20 @@
 import parse from 'html-react-parser';
 import ArrowAnimation from '@/components/ArrowAnimation';
 import TransitionLink from '@/components/TransitionLink';
-import { IProject } from '@/types';
+import { IEvent } from '@/types';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
-import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
+import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { useRef } from 'react';
 
 interface Props {
-    project: IProject;
+    event: IEvent;
 }
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-const ProjectDetails = ({ project }: Props) => {
+const EventDetails = ({ event }: Props) => {
     const containerRef = useRef<HTMLDivElement>(null);
 
     useGSAP(
@@ -36,10 +36,9 @@ const ProjectDetails = ({ project }: Props) => {
                 stagger: 0.1,
             });
         },
-        { scope: containerRef },
+        { scope: containerRef }
     );
 
-    // blur info div and make it smaller on scroll
     useGSAP(
         () => {
             if (window.innerWidth < 992) return;
@@ -48,7 +47,6 @@ const ProjectDetails = ({ project }: Props) => {
                 filter: 'blur(3px)',
                 autoAlpha: 0,
                 scale: 0.9,
-                // position: 'sticky',
                 scrollTrigger: {
                     trigger: '#info',
                     start: 'bottom bottom',
@@ -59,10 +57,9 @@ const ProjectDetails = ({ project }: Props) => {
                 },
             });
         },
-        { scope: containerRef },
+        { scope: containerRef }
     );
 
-    // parallax effect on images
     useGSAP(
         () => {
             gsap.utils
@@ -76,12 +73,11 @@ const ProjectDetails = ({ project }: Props) => {
                             start: () => (i ? 'top bottom' : 'top 50%'),
                             end: 'bottom top',
                             scrub: true,
-                            // invalidateOnRefresh: true, // to make it responsive
                         },
                     });
                 });
         },
-        { scope: containerRef },
+        { scope: containerRef }
     );
 
     return (
@@ -96,77 +92,33 @@ const ProjectDetails = ({ project }: Props) => {
                     Back
                 </TransitionLink>
 
-                <div
-                    className="top-0 min-h-[calc(100svh-100px)] flex"
-                    id="info"
-                >
+                <div className="top-0 min-h-[calc(100svh-100px)] flex" id="info">
                     <div className="relative w-full">
                         <div className="flex items-start gap-6 mx-auto mb-10 max-w-[635px]">
                             <h1 className="fade-in-later opacity-0 text-4xl md:text-[60px] leading-none font-anton overflow-hidden">
-                                <span className="inline-block">
-                                    {project.title}
-                                </span>
+                                <span className="inline-block">{event.title}</span>
                             </h1>
-
-                            <div className="fade-in-later opacity-0 flex gap-2">
-                                {project.sourceCode && (
-                                    <a
-                                        href={project.sourceCode}
-                                        target="_blank"
-                                        rel="noreferrer noopener"
-                                        className="hover:text-primary"
-                                    >
-                                        <Github size={30} />
-                                    </a>
-                                )}
-                                {project.liveUrl && (
-                                    <a
-                                        href={project.liveUrl}
-                                        target="_blank"
-                                        rel="noreferrer noopener"
-                                        className="hover:text-primary"
-                                    >
-                                        <ExternalLink size={30} />
-                                    </a>
-                                )}
-                            </div>
                         </div>
 
                         <div className="max-w-[635px] space-y-7 pb-20 mx-auto">
                             <div className="fade-in-later">
-                                <p className="text-muted-foreground font-anton mb-3">
-                                    Year
-                                </p>
-
-                                <div className="text-lg">{project.year}</div>
+                                <p className="text-muted-foreground font-anton mb-3">Year</p>
+                                <div className="text-lg">{event.year}</div>
                             </div>
                             <div className="fade-in-later">
-                                <p className="text-muted-foreground font-anton mb-3">
-                                    Tech & Technique
-                                </p>
-
-                                <div className="text-lg">
-                                    {project.techStack.join(', ')}
-                                </div>
+                                <p className="text-muted-foreground font-anton mb-3">Tags</p>
+                                <div className="text-lg">{event.tags.join(', ')}</div>
                             </div>
                             <div className="fade-in-later">
-                                <p className="text-muted-foreground font-anton mb-3">
-                                    Description
-                                </p>
-
+                                <p className="text-muted-foreground font-anton mb-3">Description</p>
                                 <div className="text-lg prose-xl markdown-text">
-                                    {parse(project.description)}
+                                    {parse(event.description)}
                                 </div>
                             </div>
-                            {project.role && (
+                            {event.role && (
                                 <div className="fade-in-later">
-                                    <p className="text-muted-foreground font-anton mb-3">
-                                        My Role
-                                    </p>
-
-                                    <div className="text-lg">
-                                        {parse(project.role)}
-                                    </div>
+                                    <p className="text-muted-foreground font-anton mb-3">Role</p>
+                                    <div className="text-lg">{parse(event.role)}</div>
                                 </div>
                             )}
                         </div>
@@ -179,7 +131,7 @@ const ProjectDetails = ({ project }: Props) => {
                     className="fade-in-later relative flex flex-col gap-2 max-w-[800px] mx-auto"
                     id="images"
                 >
-                    {project.images.map((image) => (
+                    {event.images.map((image) => (
                         <div
                             key={image}
                             className="group relative w-full aspect-[750/400] bg-background-light"
@@ -205,4 +157,4 @@ const ProjectDetails = ({ project }: Props) => {
     );
 };
 
-export default ProjectDetails;
+export default EventDetails;

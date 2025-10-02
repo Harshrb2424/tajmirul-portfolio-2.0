@@ -55,7 +55,13 @@ const Preloader = () => {
         <div className="fixed inset-0 z-[6] flex flex-col items-center justify-center" ref={preloaderRef}>
             <div className="flex w-full h-full">
                 {Array.from({ length: 10 }).map((_, i) => (
-                    <div key={i} className="preloader-item h-full w-[10%] bg-black"></div>
+                    <div
+                        key={i}
+                        className="preloader-item h-full w-[10%]"
+                        style={{
+                            background: `linear-gradient(to bottom, hsl(var(--extra-5)), hsl(var(--extra-4)))`,
+                        }}
+                    ></div>
                 ))}
             </div>
             <div className="svg-item absolute top-[20vh] md:top-[10vh] left-1/2 -translate-x-1/2 opacity-0">

@@ -1,32 +1,30 @@
 'use client';
 import SectionTitle from '@/components/SectionTitle';
-import { PROJECTS } from '@/lib/data';
+import { EVENTS } from '@/lib/data'; // Updated from PROJECTS to EVENTS
 import { cn } from '@/lib/utils';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import Image from 'next/image';
 import React, { useRef, useState, MouseEvent } from 'react';
-import Project from './Project';
+import Event from './Event'; // You might need to rename this component to 'Event'
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
-const ProjectList = () => {
+const EventList = () => {
     const containerRef = useRef<HTMLDivElement>(null);
-    const projectListRef = useRef<HTMLDivElement>(null);
+    const eventListRef = useRef<HTMLDivElement>(null); // Renamed from projectListRef
     const imageContainer = useRef<HTMLDivElement>(null);
     const imageRef = useRef<HTMLImageElement>(null);
-    const [selectedProject, setSelectedProject] = useState<string | null>(
-        PROJECTS[0].slug,
+    const [selectedEvent, setSelectedEvent] = useState<string | null>(
+        // Note: The slug field is not present in the new IEvent interface, you'll need to decide on a unique identifier, like the title or a new slug field.
+        EVENTS[0].title.replace(/\s/g, '-').toLowerCase() // Using title to create a simple slug for the example
     );
 
-    // update imageRef.current href based on the cursor hover position
-    // also update image position
     useGSAP(
         (context, contextSafe) => {
-            // show image on hover
             if (window.innerWidth < 768) {
-                setSelectedProject(null);
+                setSelectedEvent(null);
                 return;
             }
 
@@ -35,17 +33,14 @@ const ProjectList = () => {
                 if (!imageContainer.current) return;
 
                 if (window.innerWidth < 768) {
-                    setSelectedProject(null);
+                    setSelectedEvent(null);
                     return;
                 }
 
-                const containerRect =
-                    containerRef.current?.getBoundingClientRect();
-                const imageRect =
-                    imageContainer.current.getBoundingClientRect();
+                const containerRect = containerRef.current?.getBoundingClientRect();
+                const imageRect = imageContainer.current.getBoundingClientRect();
                 const offsetTop = e.clientY - containerRect.y;
 
-                // if cursor is outside the container, hide the image
                 if (
                     containerRect.y > e.clientY ||
                     containerRect.bottom < e.clientY ||
@@ -71,7 +66,7 @@ const ProjectList = () => {
                 window.removeEventListener('mousemove', handleMouseMove);
             };
         },
-        { scope: containerRef, dependencies: [containerRef.current] },
+        { scope: containerRef, dependencies: [containerRef.current] }
     );
 
     useGSAP(
@@ -91,45 +86,45 @@ const ProjectList = () => {
                 opacity: 0,
             });
         },
-        { scope: containerRef },
+        { scope: containerRef }
     );
 
-    const handleMouseEnter = (slug: string) => {
+    const handleMouseEnter = (eventTitle: string) => {
         if (window.innerWidth < 768) {
-            setSelectedProject(null);
+            setSelectedEvent(null);
             return;
         }
 
-        setSelectedProject(slug);
+        setSelectedEvent(eventTitle.replace(/\s/g, '-').toLowerCase());
     };
 
     return (
         <section className="pb-section" id="selected-projects">
             <div className="container">
-                <SectionTitle title="SELECTED PROJECTS" />
+                <SectionTitle title="Events Conducted" /> {/* Changed from PROJECTS to EVENTS */}
 
-                <div className="group/projects relative" ref={containerRef}>
-                    {selectedProject !== null && (
+                <div className="group/events relative" ref={containerRef}> {/* Renamed from group/projects */}
+                    {selectedEvent !== null && (
                         <div
                             className="max-md:hidden absolute right-0 top-0 z-[1] pointer-events-none w-[200px] xl:w-[350px] aspect-[3/4] overflow-hidden opacity-0"
                             ref={imageContainer}
                         >
-                            {PROJECTS.map((project) => (
+                            {EVENTS.map((event) => (
                                 <Image
-                                    src={project.thumbnail}
-                                    alt="Project"
+                                    src={event.longThumbnail}
+                                    alt="Event"
                                     width="400"
                                     height="500"
                                     className={cn(
                                         'absolute inset-0 transition-all duration-500 w-full h-full object-cover',
                                         {
                                             'opacity-0':
-                                                project.slug !==
-                                                selectedProject,
-                                        },
+                                                event.title.replace(/\s/g, '-').toLowerCase() !==
+                                                selectedEvent,
+                                        }
                                     )}
                                     ref={imageRef}
-                                    key={project.slug}
+                                    key={event.title} // Using title as key
                                 />
                             ))}
                         </div>
@@ -137,15 +132,15 @@ const ProjectList = () => {
 
                     <div
                         className="flex flex-col max-md:gap-10"
-                        ref={projectListRef}
+                        ref={eventListRef} // Renamed from projectListRef
                     >
-                        {PROJECTS.map((project, index) => (
-                            <Project
+                        {EVENTS.map((event, index) => (
+                            <Event // You'll need to update this component to receive IEvent props
                                 index={index}
-                                project={project}
-                                selectedProject={selectedProject}
-                                onMouseEnter={handleMouseEnter}
-                                key={project.slug}
+                                event={event} // Passing event data to the Project component
+                                selectedEvent={selectedEvent}
+                                onMouseEnter={() => handleMouseEnter(event.title)}
+                                key={event.title} // Using title as key
                             />
                         ))}
                     </div>
@@ -155,4 +150,4 @@ const ProjectList = () => {
     );
 };
 
-export default ProjectList;
+export default EventList;

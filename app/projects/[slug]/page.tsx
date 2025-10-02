@@ -1,38 +1,36 @@
 import { notFound } from 'next/navigation';
-import ProjectDetails from './_components/ProjectDetails';
-import { PROJECTS } from '@/lib/data';
+import EventDetails from './_components/EventDetails'; // Create this new component
+import { EVENTS } from '@/lib/data';
 import { Metadata } from 'next';
 
+// This function generates the static paths for all events
 export const generateStaticParams = async () => {
-    return PROJECTS.map((project) => ({ slug: project.slug }));
+    return EVENTS.map((event) => ({ slug: event.title.replace(/\s/g, '-').toLowerCase() }));
 };
 
+// This function generates metadata for each event page
 export const generateMetadata = async ({
     params,
 }: {
-    params: Promise<{ slug: string }>;
+    params: { slug: string };
 }) => {
-    const { slug } = await params;
-    const project = PROJECTS.find((project) => project.slug === slug);
+    const event = EVENTS.find((event) => event.title.replace(/\s/g, '-').toLowerCase() === params.slug);
 
     return {
-        title: `${project?.title} - ${project?.techStack
-            .slice(0, 3)
-            .join(', ')}`,
-        description: project?.description,
+        title: `${event?.title} - ${event?.tags.slice(0, 3).join(', ')}`,
+        description: event?.description,
     } as Metadata;
 };
 
-const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
-    const { slug } = await params;
+// This is the main page component for a single event
+const Page = async ({ params }: { params: { slug: string } }) => {
+    const event = EVENTS.find((event) => event.title.replace(/\s/g, '-').toLowerCase() === params.slug);
 
-    const project = PROJECTS.find((project) => project.slug === slug);
-
-    if (!project) {
+    if (!event) {
         return notFound();
     }
 
-    return <ProjectDetails project={project} />;
+    return <EventDetails event={event} />;
 };
 
 export default Page;

@@ -1,5 +1,6 @@
 'use client';
 import ArrowAnimation from '@/components/ArrowAnimation';
+import Button from '@/components/Button';
 // import Button from '@/components/Button';
 // import { GENERAL_INFO } from '@/lib/data';
 import { useGSAP } from '@gsap/react';
@@ -42,52 +43,50 @@ const Banner = () => {
             >
                 <div className="max-md:grow max-md:flex flex-col justify-center items-start max-w-[544px]">
                     <h1 className="banner-title slide-up-and-fade leading-[.95] text-6xl sm:text-[80px] font-anton">
-                        <span className="text-primary">FRONTEND</span>
-                        <br /> <span className="ml-4">DEVELOPER</span>
+                        <span className="text-primary">About Us</span>
+                        <br /> <span className="ml-4">PLEXUS</span>
                     </h1>
                     <p className="banner-description slide-up-and-fade mt-6 text-lg text-muted-foreground">
-                        Hi! I&apos;m{' '}
+                        With the motto
                         <span className="font-medium text-foreground">
-                            Tajmirul
+                            {" "}“United by Nerves”{" "}
                         </span>
-                        . A creative Frontend Developer with 3+ years of
-                        experience in building high-performance, scalable, and
-                        responsive web solutions.
+                        Plexus symbolizes the interconnected network of students who work together to learn, innovate, and grow.
                     </p>
-                    {/* <Button
+                    <Button
                         as="link"
                         target="_blank"
                         rel="noopener noreferrer"
-                        href={GENERAL_INFO.upworkProfile}
+                        href={"https://plexusclub.github.io/events/"}
                         variant="primary"
                         className="mt-9 banner-button slide-up-and-fade"
                     >
-                        Hire Me
-                    </Button> */}
+                        Events
+                    </Button>
                 </div>
 
                 <div className="md:absolute bottom-[10%] right-[4%] flex md:flex-col gap-4 md:gap-8 text-center md:text-right">
                     <div className="slide-up-and-fade">
                         <h5 className="text-3xl sm:text-4xl font-anton text-primary mb-1.5">
-                            3+
+                            2+
                         </h5>
                         <p className="text-muted-foreground">
-                            Years of Experience
+                            Years
                         </p>
                     </div>
                     <div className="slide-up-and-fade">
                         <h5 className="text-3xl sm:text-4xl font-anton text-primary mb-1.5">
-                            7+
+                            4+
                         </h5>
                         <p className="text-muted-foreground">
-                            Completed Projects
+                            Events
                         </p>
                     </div>
                     <div className="slide-up-and-fade">
                         <h5 className="text-3xl sm:text-4xl font-anton text-primary mb-1.5">
-                            10K+
+                            50+
                         </h5>
-                        <p className="text-muted-foreground">Hours Worked</p>
+                        <p className="text-muted-foreground">Active Members</p>
                     </div>
                 </div>
             </div>

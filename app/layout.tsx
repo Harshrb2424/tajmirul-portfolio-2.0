@@ -28,7 +28,7 @@ const robotoFlex = Roboto_Flex({
 });
 
 export const metadata: Metadata = {
-    title: 'Plexus Club - MRCE',
+    title: 'About Us - Plexus Club - CSE AI&ML - MRCE',
     description: 'United by Nerves',
 };
 

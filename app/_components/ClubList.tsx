@@ -8,7 +8,7 @@ import { useRef } from 'react';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-const Experiences = () => {
+const ClubList = () => {
     const containerRef = useRef<HTMLDivElement>(null);
 
     useGSAP(
@@ -52,13 +52,13 @@ const Experiences = () => {
     );
 
     return (
-        <section className="py-section" id="my-experience">
+        <section className="py-section" id="club-list">
             <div className="container" ref={containerRef}>
                 <SectionTitle title="Plexus CLubs" />
 
                 <div className="grid gap-14">
                     {CLUBS.map((item) => (
-                        <div key={item.name} className="experience-item">
+                        <div key={item.name} className="club-item">
                             <p className="text-5xl font-anton leading-none mt-3.5 mb-2.5">
                                 {item.name}
                             </p>
@@ -73,4 +73,4 @@ const Experiences = () => {
     );
 };
 
-export default Experiences;
+export default ClubList;

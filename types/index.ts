@@ -28,3 +28,15 @@ export interface IProject {
     liveUrl?: string;
     sourceCode?: string;
 }
+export interface IEvent {
+    title: string;
+    year: number;
+    month: number;
+    link: string;
+    description: string;
+    role: string;
+    tags: string[];
+    thumbnail: string;
+    longThumbnail: string;
+    images: string[];
+}

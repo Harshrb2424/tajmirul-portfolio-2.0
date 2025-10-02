@@ -1,17 +1,17 @@
 import AboutMe from './_components/AboutMe';
-// import Banner from './_components/Banner';
-// import Experiences from './_components/Experiences';
+import Banner from './_components/Banner';
 // import Skills from './_components/Skills';
-// import ProjectList from './_components/ProjectList';
+import ClubList from './_components/ClubList';
+import EventList from './_components/EventList';
 
 export default async function Page() {
     return (
         <div className="page-">
-            {/* <Banner /> */}
+            <Banner />
             <AboutMe />
-            {/* <Skills />
-            <Experiences />
-            <ProjectList /> */}
+            {/* <Skills /> */}
+            <ClubList />
+            <EventList />
         </div>
     );
 }

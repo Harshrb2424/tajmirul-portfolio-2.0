@@ -1,4 +1,4 @@
-import { IProject } from '@/types';
+import { IEvent, IProject } from '@/types';
 
 export const GENERAL_INFO = {
     slogan: 'United By Nerves',
@@ -50,48 +50,6 @@ export const MANAGEMENT = [
     },
 ];
 
-export const EVENTS = [
-    {
-        title: 'Hackathons',
-        slug: 'hackathons',
-        year: 2024,
-        description: `
-        Plexus hosts engaging hackathons that challenge students to solve real-world problems through 
-        innovation, collaboration, and technical skills. 
-        `,
-        techStack: ['Collaboration', 'Problem Solving', 'Teamwork'],
-        thumbnail: '/events/thumbnail/hackathon.jpg',
-        longThumbnail: '/events/long/hackathon.jpg',
-        images: ['/events/images/hackathon-1.jpg'],
-    },
-    {
-        title: 'Technical Workshops',
-        slug: 'technical-workshops',
-        year: 2024,
-        description: `
-        Interactive workshops covering modern technologies, coding practices, and industry tools 
-        to help students strengthen their technical foundations.
-        `,
-        techStack: ['Workshops', 'Learning', 'Innovation'],
-        thumbnail: '/events/thumbnail/workshop.jpg',
-        longThumbnail: '/events/long/workshop.jpg',
-        images: ['/events/images/workshop-1.jpg'],
-    },
-    {
-        title: 'Non-Technical Events',
-        slug: 'non-technical-events',
-        year: 2024,
-        description: `
-        Fun, engaging, and creative events to bring students together, foster teamwork, 
-        and build communication skills beyond academics.
-        `,
-        techStack: ['Teamwork', 'Creativity', 'Networking'],
-        thumbnail: '/events/thumbnail/non-technical.jpg',
-        longThumbnail: '/events/long/non-technical.jpg',
-        images: ['/events/images/non-technical-1.jpg'],
-    },
-];
-
 export const OUR_COLLEGE = {
     name: 'MRCE',
     description: `
@@ -101,20 +59,20 @@ export const OUR_COLLEGE = {
     `,
 };
 export const IMAGES = [
-  { name: "MGRI", link: "/assets/MRGI.png" },
-  { name: "MRCE", link: "/assets/MRCE.png" },
-  { name: "Plexus", link: "/assets/Plexus.png" },
+    { name: "MGRI", link: "./assets/MRGI.png" },
+    { name: "MRCE", link: "./assets/MRCE.png" },
+    { name: "Plexus", link: "./assets/Plexus.png" },
 ];
 
 export const LINKS = [
-  { name: "Our Members", link: "/members" },
-  { name: "Our Management", link: "/management" },
-  { name: "Our College", link: "/college" },
-  { name: "Events", link: "/events" },
-  { name: "About Us", link: "/about" },
-  { name: "Contact Us", link: "/contact" },
-  { name: "Clubs", link: "/clubs" },
-  { name: "Stories", link: "/stories" },
+    { name: "Our Members", link: "/members" },
+    { name: "Our Management", link: "/management" },
+    { name: "Our College", link: "/college" },
+    { name: "Events", link: "/events" },
+    { name: "About Us", link: "/about" },
+    { name: "Contact Us", link: "/contact" },
+    { name: "Clubs", link: "/clubs" },
+    { name: "Stories", link: "/stories" },
 ];
 
 export const MY_STACK = {
@@ -384,25 +342,105 @@ export const PROJECTS: IProject[] = [
     },
 ];
 
+export const EVENTS: IEvent[] = [
+    // {
+    //     title: 'Figma Workshop',
+    //     year: 2025,
+    //     month: 3,
+    //     link: "",
+    //     description: 'This is a 3-day Figma UI/UX Workshop agenda covering everything from basic UI/UX principles to prototyping and team collaboration. Participants will learn how to master visual design, create interactive prototypes, and work on a final project.',
+    //     role: 'Coordinated by Design Team Plexus',
+    //     tags: ['UI/UX', 'Workshop', 'Figma', 'Design'],
+    //     thumbnail: 'https://cdn.prod.website-files.com/59e16042ec229e00016d3a66/64309e7ce733f37f0a4c0880_Figma-rebrand-assets_Blog-hero.webp',
+    //     longThumbnail: 'https://cdn.prod.website-files.com/59e16042ec229e00016d3a66/64309e7ce733f37f0a4c0880_Figma-rebrand-assets_Blog-hero.webp',
+    //     images: ['https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg'],
+    // },
+    {
+        title: 'MISSION: ZERO BUG',
+        year: 2025,
+        month: 9,
+        link: "https://www.instagram.com/p/DObK-hQE3dg/?img_index=1",
+        description: 'An electrifying coding battle with three intense levels: Quick Fixes, Logic Traps, and a Final Showdown. This debugging challenge, presented on Engineer’s Day, is for teams of two to test their speed, survival, and brainpower in a thrilling coding arena.',
+        role: 'Presented by Department of CSE (AI & ML) in association with PLEXUS',
+        tags: ['Coding', 'Debugging', 'Technical', 'Competition'],
+        thumbnail: 'https://raw.githubusercontent.com/PlexusClub/events/refs/heads/main/images/zero-bug.png',
+        longThumbnail: 'https://raw.githubusercontent.com/PlexusClub/events/refs/heads/main/images/zero-bug-poster.png',
+        images: [],
+    },
+    {
+        title: 'VERBO FIESTA - An Exciting Verbal Arena',
+        year: 2025,
+        month: 3,
+        link: "https://www.instagram.com/p/DHNWgwXyi2f/",
+        description: 'VERBO FIESTA is a thrilling verbal showdown with events like a Debate Competition, "Commercial Time," "Word Weave," and "JAM" (Just a Minute). It aims to promote verbal dexterity, critical thinking, creativity, and teamwork through fun and competitive challenges.',
+        role: 'Coordinated by PLEXUS - Non-Technical Club',
+        tags: ['Verbal', 'Debate', 'Communication', 'Non-Technical'],
+        thumbnail: 'https://plexusclub.github.io/events/images/verbofita.png',
+        longThumbnail: 'https://raw.githubusercontent.com/PlexusClub/events/refs/heads/main/images/verbofita-poster.png',
+        images: [],
+    },
+    {
+        title: 'Code-Con: The Ultimate Tech Challenge',
+        year: 2025,
+        month: 3,
+        link: "https://www.instagram.com/p/DHNWZIzSWfo/",
+        description: 'Code-Con is a progressive tech challenge with rounds like "Tech Trivia," "Time Trial," and "The Conquest." It empowers students to work under pressure, solve problems, and increase their domain knowledge in C-language and Python.',
+        role: 'Coordinated by PLEXUS - Technical Club',
+        tags: ['Coding', 'Technical', 'Challenge', 'Python', 'C Language'],
+        thumbnail: 'https://plexusclub.github.io/events/images/codecon.png',
+        longThumbnail: 'https://raw.githubusercontent.com/PlexusClub/events/refs/heads/main/images/codecon-poster.png',
+        images: [],
+    },
+];
+
+
+export const CLUBS = [
+    {
+        name: 'Technical Club',
+        description: 'Encourages innovation through hackathons, workshops, paper presentations, and collaborative projects.',
+    },
+    {
+        name: 'Non-Technical Club',
+        description: 'Focuses on debates, JAM sessions, arts, crafts, cultural programs, and talent shows.',
+    },
+    {
+        name: 'Sports & Esports Club',
+        description: 'Encourages physical fitness and mental sharpness through outdoor games, indoor tournaments, and esports competitions.',
+    },
+    {
+        name: 'Social Media Club',
+        description: 'Handles promotions, manages official social handles, creates engaging content, and ensures outreach.',
+    },
+    {
+        name: 'Design Club',
+        description: 'Responsible for posters, reels, event branding, and creative media production.',
+    },
+];
+
 export const MY_EXPERIENCE = [
     {
-        title: 'Software Engineer (Frontend)',
-        company: 'Strativ AB',
-        duration: 'Dec 2024 - Present',
+        title: 'Technical Club',
+        company: '',
+        duration: 'Encourages innovation through hackathons, workshops, paper presentations, and collaborative projects.',
     },
     {
-        title: 'Frontend Developer',
-        company: 'Epikcoders',
-        duration: 'Oct 2023 - Nov 2024',
+        title: 'Non-Technical Club',
+        company: '',
+        duration: 'Focuses on debates, JAM sessions, arts, crafts, cultural programs, and talent shows.',
     },
     {
-        title: 'Frontend Engineer',
-        company: 'Anchorblock Technology',
-        duration: 'Oct 2022 - Sep 2023',
+        title: 'Sports & Esports Club',
+        company: '',
+        duration: 'Encourages physical fitness and mental sharpness through outdoor games, indoor tournaments, and esports competitions.',
     },
     {
-        title: 'Frontend Developer (Part-time)',
-        company: 'Branex IT',
-        duration: 'Jan 2022 - Oct 2022',
+        title: 'Social Media Club',
+        company: '',
+        duration: 'Handles promotions, manages official social handles, creates engaging content, and ensures outreach.',
+    },
+    {
+        title: 'Design Club',
+        company: '',
+        duration: 'Responsible for posters, reels, event branding, and creative media production.',
     },
 ];
