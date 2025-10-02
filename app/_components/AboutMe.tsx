@@ -54,7 +54,7 @@ const AboutMe = () => {
     return (
         <section className="pb-section pt-24" id="about-me">
             <div className="container" ref={container}>
-                <h2 className="text-4xl md:text-4xl font-thin mb-20 slide-up-and-fade">
+                <h2 className="text-2xl md:text-3xl font-thin mb-20 slide-up-and-fade">
                     The Plexus Club is the official student association of the CSE (Artificial Intelligence & Machine Learning) Department, Malla Reddy College of Engineering (MRCE). It was founded to create a platform that unites technical innovation, creativity, leadership, and community spirit.
                 </h2>
 
