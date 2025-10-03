@@ -165,6 +165,200 @@ export const MY_STACK = {
         },
     ],
 };
+export const PLEXUS_COMMITTEE = {
+    patrons: [
+        {
+            name: 'Dr. Anantha Raman G. R',
+            designation: 'Professor',
+            role: 'HOD',
+            link: 'https://mrce.in/cse_AI&MLFacultyhome.html',
+            icon: ['https://mrce.in/img/facultyimages/DeanIQAC12ar.jpg']
+        },
+        {
+            name: 'Mr. R. Venkatesh',
+            designation: 'Assistant Professor',
+            role: 'Faculty Coordinator',
+            icon: ['https://raw.githubusercontent.com/PlexusClub/PlexusClub.github.io/refs/heads/main/assets/PFP/venki.jpg']
+        },
+    ],
+    clubAssociation: [
+        {
+            name: 'N Parthiban',
+            designation: 'Student',
+            role: 'President',
+            icon: ['https://raw.githubusercontent.com/PlexusClub/PlexusClub.github.io/refs/heads/main/assets/PFP/parthiban.jpg']
+        },
+        {
+            name: 'Arvind Singh',
+            designation: 'Student',
+            role: 'Vice President',
+            icon: ['https://raw.githubusercontent.com/PlexusClub/PlexusClub.github.io/refs/heads/main/assets/PFP/arvind-singh.jpeg']
+        },
+        {
+            name: 'Aishi Jain',
+            designation: 'Student',
+            role: 'Secretary',
+            icon: ['https://raw.githubusercontent.com/PlexusClub/PlexusClub.github.io/refs/heads/main/assets/PFP/aishi-jain.jpg']
+        },
+        {
+            name: 'R. Dileep Kumar',
+            designation: 'Student',
+            role: 'Secretary',
+            icon: ['https://raw.githubusercontent.com/PlexusClub/PlexusClub.github.io/refs/heads/main/assets/PFP/dileep-kumar.png']
+        },
+        {
+            name: 'Jahnavi',
+            designation: 'Student',
+            role: 'Joint Secretary',
+            icon: ['https://raw.githubusercontent.com/PlexusClub/PlexusClub.github.io/refs/heads/main/assets/PFP/jahnavi.png']
+        },
+        {
+            name: 'Taaha',
+            designation: 'Student',
+            role: 'Associate Secretary',
+            icon: ['https://raw.githubusercontent.com/PlexusClub/PlexusClub.github.io/refs/heads/main/assets/PFP/taaha.png']
+        },
+        {
+            name: 'Druvika',
+            designation: 'Student',
+            role: 'Member',
+            icon: ['https://raw.githubusercontent.com/PlexusClub/PlexusClub.github.io/refs/heads/main/assets/PFP/druvika.png']
+        },
+        {
+            name: 'M Vyshnavi',
+            designation: 'Student',
+            role: 'Member',
+        },
+        {
+            name: 'Lochani',
+            designation: 'Student',
+            role: 'Member',
+            icon: ['https://raw.githubusercontent.com/PlexusClub/PlexusClub.github.io/refs/heads/main/assets/PFP/lochani.jpeg']
+        },
+        {
+            name: 'Swasthik',
+            designation: 'Student',
+            role: 'Member',
+            icon: ['https://raw.githubusercontent.com/PlexusClub/PlexusClub.github.io/refs/heads/main/assets/PFP/swasthik.png']
+        },
+        {
+            name: 'Vishnu',
+            designation: 'Student',
+            role: 'Member',
+        },
+    ],
+    clubHeads: [
+        {
+            name: 'P Guna Ranjan  & R Aksheetha',
+            designation: 'Student',
+            role: 'Technical Club Head',
+            icon: ['https://raw.githubusercontent.com/PlexusClub/PlexusClub.github.io/refs/heads/main/assets/PFP/guna-ranjan.png', 'https://raw.githubusercontent.com/PlexusClub/PlexusClub.github.io/refs/heads/main/assets/PFP/akeheetha.png']
+        },
+        {
+            name: 'E Deepika & G Akshitha',
+            designation: 'Students',
+            role: 'Non-Technical Club Heads',
+            icon: ['https://raw.githubusercontent.com/PlexusClub/PlexusClub.github.io/refs/heads/main/assets/PFP/deepika.jpg', 'https://raw.githubusercontent.com/PlexusClub/PlexusClub.github.io/refs/heads/main/assets/PFP/akshitha.png']
+        },
+        {
+            name: 'B. Arjun & Aarthi',
+            designation: 'Students',
+            role: 'Social Media Club Heads',
+            icon: ['https://raw.githubusercontent.com/PlexusClub/PlexusClub.github.io/refs/heads/main/assets/PFP/arjun.jpg', 'https://raw.githubusercontent.com/PlexusClub/PlexusClub.github.io/refs/heads/main/assets/PFP/aarthi.png']
+        },
+        {
+            name: 'Dimple Yadav & Harsh RB',
+            designation: 'Students',
+            role: 'Design Club Heads',
+            link: 'https://plexusclub.github.io/DesignTeam/',
+            icon: ['https://plexusclub.github.io/DesignTeam/resources/members/dimple.png', 'https://harshrb2424.github.io/profile/resources/images/Harsh%20R%20Bagtharia.jpg']
+        },
+        {
+            name: ' G Chareeth Kumar',
+            designation: 'Students',
+            role: 'Sports Club Heads',
+        },
+    ],
+    coordinators: [
+        // Technical Coordinators
+        { name: 'Siddappa', role: 'Technical' },
+        { name: 'Ramya', role: 'Technical' },
+        { name: 'G Ramya', role: 'Technical' },
+
+        // Non-Technical Coordinators
+        { name: 'Poojitha', role: 'Non-Technical' },
+        { name: 'Nikhil', role: 'Non-Technical' },
+        { name: 'Deekshitha', role: 'Non-Technical' },
+        { name: 'Chandrakala', role: 'Non-Technical' },
+        { name: 'Subhash', role: 'Non-Technical' },
+        { name: 'Anmol', role: 'Non-Technical' },
+        { name: 'Khyathi', role: 'Non-Technical' },
+        { name: 'Pallavi', role: 'Non-Technical' },
+
+        // Design Coordinators
+        { name: 'Purushottam', role: 'Design' },
+        { name: 'Sruthi', role: 'Design' },
+        { name: 'Nidhi', role: 'Design' },
+        { name: 'Kevin', role: 'Design' },
+        { name: 'Matthew', role: 'Design' },
+        { name: 'Rakshitha', role: 'Design' },
+
+        // Social Media Coordinators
+        { name: 'Bharath Chandra', role: 'Social Media' },
+        { name: 'Sumanth', role: 'Social Media' },
+        { name: 'Yashwanth', role: 'Social Media' },
+
+        // Sports Coordinators
+        { name: 'Karthikeyan', role: 'Sports' },
+        { name: 'Venkatesh', role: 'Sports' },
+        { name: 'Nitish', role: 'Sports' },
+        { name: 'Chandu', role: 'Sports' },
+        { name: 'G Tarun', role: 'Sports' },
+    ],
+
+    members: [
+        // Technical Members
+        { name: 'Lokesh', role: 'Technical' },
+        { name: 'Koushil', role: 'Technical' },
+        { name: 'Roshan', role: 'Technical' },
+        { name: 'Aishwarya', role: 'Technical' },
+        { name: 'Nandini', role: 'Technical' },
+        { name: 'Atulya', role: 'Technical' },
+        { name: 'Harshavardhan', role: 'Technical' },
+
+        // Non-Technical Members
+        { name: 'Rayan', role: 'Non-Technical' },
+        { name: 'Niharika', role: 'Non-Technical' },
+        { name: 'Gretchen', role: 'Non-Technical' },
+        { name: 'Triveni', role: 'Non-Technical' },
+        { name: 'Virat', role: 'Non-Technical' },
+        { name: 'Sameeksha', role: 'Non-Technical' },
+
+        // Design Members
+        { name: 'Hymavathi', role: 'Design' },
+        { name: 'Malasri', role: 'Design' },
+        { name: 'Shikara', role: 'Design' },
+
+        // Social Media Members
+        { name: 'Varsha', role: 'Social Media' },
+        { name: 'Karthik', role: 'Social Media' },
+        { name: 'Abhinav', role: 'Social Media' },
+        { name: 'Sriya', role: 'Social Media' },
+        { name: 'Triya', role: 'Social Media' },
+
+        // Sports Members
+        { name: 'Rohini', role: 'Sports' },
+        { name: 'Anil', role: 'Sports' },
+        { name: 'Abhiram', role: 'Sports' },
+        { name: 'Akshay', role: 'Sports' },
+        { name: 'Dayakar', role: 'Sports' },
+        { name: 'Rakesh', role: 'Sports' },
+        { name: 'Jashwanth', role: 'Sports' },
+        { name: 'Shiva Shankar', role: 'Sports' },
+    ],
+    description: "🏛️ Plexus has been formed for monitoring CSE (AI&ML) Department activities and ensuring holistic student development."
+};
+
 
 export const PROJECTS: IProject[] = [
     {

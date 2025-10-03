@@ -7,5 +7,5 @@ export default function cloudinaryLoader({
     width: number
     quality?: number
 }) {
-    return `./${src}`
+    return `${src}`
 }
